@@ -1,3 +1,5 @@
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import "@/assets/styles/global.css"
 
 export const metadata ={
@@ -8,7 +10,9 @@ export const metadata ={
 const MainLayout = ({children}) => {
     return ( <html>
         <body>
+            <Navbar/>
             <main>{children}</main>
+            <Footer/>
         </body>
     </html> );
 }
