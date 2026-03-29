@@ -13,7 +13,7 @@ const PropertyContactForm = ({ property }) => {
 
   useEffect(() => {
     if (state.error) toast.error(state.error);
-    if (state.submitted) toast.success("You are fucked");
+    if (state.submitted) toast.success("Messaged has been sent");
   }, [state]);
 
   if (state.submitted) {
