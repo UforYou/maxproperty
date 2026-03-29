@@ -10,7 +10,7 @@ const ProfileProperties = ({ properties: initialProperties }) => {
   const [properties, setProperties] = useState(initialProperties);
   const handleDeleteProperty = async (propertyId) => {
     const confirmed = window.confirm(
-      "Are you sure want to delete this property"
+      "Are you sure want to delete this property",
     );
 
     if (!confirmed) return;
@@ -18,12 +18,12 @@ const ProfileProperties = ({ properties: initialProperties }) => {
     await deleteProperty(propertyId);
 
     const updatedProperties = properties.filter(
-      (property) => property._id !== propertyId
+      (property) => property._id !== propertyId,
     );
 
     setProperties(updatedProperties);
 
-    toast.success("😛 PROPERTY'S BEEN FUCKED ");
+    toast.success("😛 PROPERTY'S BEEN DESTROYED");
   };
   return properties.map((property) => (
     <div key={property._id} className="mb-10">

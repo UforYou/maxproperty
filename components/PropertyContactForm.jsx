@@ -19,7 +19,7 @@ const PropertyContactForm = ({ property }) => {
   if (state.submitted) {
     return (
       <p className="text-green-500 mb-4">
-        Your message has been sent to the property fucker
+        Your message has been sent to the property owner
       </p>
     );
   }
